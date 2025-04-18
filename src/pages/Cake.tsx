@@ -23,6 +23,7 @@ const Cake = () => {
         <div className="card-body">
           <h2 className="card-title h3 mb-4">{cake.title}</h2>
           <p className="card-text text-muted">{cake.description}</p>
+          <h5>{cake.category}</h5>
         </div>
       </div>
     </div>

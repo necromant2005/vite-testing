@@ -25,20 +25,17 @@ const CakeCategory = () => {
       </h1>
       <div className="row">
         {categoryItems.map((item: Item) => (
+          <Link to={`/cakes/${categoryName}/${item.id}`} className="text-decoration-none">
           <div key={item.id} className="col-md-4 mb-4">
             <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
                 <p className="card-text">{item.description}</p>
-                <Link 
-                  to={`${isRecipesRoute ? '/recipes' : '/cakes'}/${categoryName}/${item.id}`} 
-                  className="btn btn-primary"
-                >
-                  View Details
-                </Link>
+                <p className="card-text">{item.category}</p>
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

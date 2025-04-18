@@ -11,7 +11,7 @@ const Home = () => {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {cakesData.cakes.map((cake) => (
           <div key={cake.id} className="col">
-            <Link to={`/cakes/${cake.id}`} className="text-decoration-none">
+            <Link to={`/cakes/${cake.category}/${cake.id}`} className="text-decoration-none">
               <div className="card h-100 shadow-sm">
                 <div className="card-body">
                   <h3 className="card-title h5">{cake.title}</h3>
