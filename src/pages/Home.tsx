@@ -5,7 +5,7 @@ import recipesData from '../data/recipes/recipes.json'
 
 const Home = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5" role="main">
       <h2 className="text-center mb-4">Our Delicious Cakes</h2>
       <p className="text-center text-muted mb-5">Discover our handcrafted selection of premium cakes</p>
       
@@ -13,7 +13,7 @@ const Home = () => {
         {cakesData.cakes.map((cake) => (
           <div key={cake.id} className="col">
             <Link to={`/cakes/${cake.category}/${cake.id}`} className="text-decoration-none">
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 shadow-sm" data-testid="card">
                 <div className="card-body">
                   <h3 className="card-title h5">{cake.title}</h3>
                   <p className="card-text text-muted">{cake.description}</p>
@@ -31,7 +31,7 @@ const Home = () => {
         {recipesData.recipes.map((recipe) => (
           <div key={recipe.id} className="col">
             <Link to={`/recipes/${recipe.category}/${recipe.id}`} className="text-decoration-none">
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 shadow-sm" data-testid="card">
                 <div className="card-body">
                   <h3 className="card-title h5">{recipe.title}</h3>
                   <p className="card-text text-muted">{recipe.description}</p>
