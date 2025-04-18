@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard application built with TypeScript and Vite, featuring a beautiful UI and responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern and responsive UI
+- ⚡ Fast performance with Vite
+- 📱 Mobile-friendly design
+- 🔍 Type-safe development with TypeScript
+- 🧪 Comprehensive testing setup
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Home Page
+![Home Page](./README/1_home.png)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Cakes Section
+![Cakes Section](./README/2_cakes.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Recipes Section
+![Recipes Section](./README/3_recipes.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Dynamic Recipe Selector
+![Dynamic Recipe Selector](./README/4_recipes_dynamic-selector.png)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Blog Section
+![Blog Section](./README/5_blog.png)
+
+### Async Posts Loading
+![Async Posts Loading](./README/6_blog_async_posts_loading.png)
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- ESLint for code quality
+- Vitest for testing
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Development
+
+This project uses Vite with the following plugins:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) for even faster refresh times
+
+## Code Quality
+
+The project includes comprehensive ESLint configuration for type-aware linting. See the ESLint configuration file for details on the rules and plugins used.
