@@ -26,6 +26,22 @@ const Recipes = () => {
     <div className="container py-5">
       <h1 className="mb-4">Recipes</h1>
 
+      {/* Category Filter */}
+      <div className="mb-4">
+        <select 
+          className="form-select" 
+          value={selectedCategory || ''}
+          onChange={(e) => setSelectedCategory(e.target.value || null)}
+        >
+          <option value="">All Categories</option>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {/* Recipes Grid */}
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {filteredRecipes.map((recipe: Recipe) => (
