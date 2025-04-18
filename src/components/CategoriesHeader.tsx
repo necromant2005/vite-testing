@@ -7,7 +7,12 @@ type Category = string | { name: string; title: string; description: string };
 const CategoriesHeader = () => {
   const location = useLocation();
   const isRecipesRoute = location.pathname.startsWith('/recipes');
+  const isHomePage = location.pathname === '/';
   
+  if (isHomePage) {
+    return null;
+  }
+
   const categories = isRecipesRoute ? recipeCategories : cakeCategories;
   const basePath = isRecipesRoute ? '/recipes' : '/cakes';
 
