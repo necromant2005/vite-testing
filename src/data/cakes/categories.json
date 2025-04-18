@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "name": "chocolate",
+      "title": "Chocolate Cakes",
+      "description": "Rich and decadent chocolate-based cakes"
+    },
+    {
+      "name": "vanilla",
+      "title": "Vanilla Cakes",
+      "description": "Classic vanilla-based cakes"
+    },
+    {
+      "name": "red-velvet",
+      "title": "Red Velvet Cakes",
+      "description": "Signature red velvet cakes"
+    },
+    {
+      "name": "fruit",
+      "title": "Fruit Cakes",
+      "description": "Cakes with fruit flavors and ingredients"
+    },
+    {
+      "name": "specialty",
+      "title": "Specialty Cakes",
+      "description": "Unique and special cake varieties"
+    }
+  ]
+} 
