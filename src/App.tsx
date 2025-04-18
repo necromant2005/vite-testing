@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 // import './components/Layout.css'
 import Home from './pages/Home'
+import Cakes from './pages/Cakes'
 
 import Cake from './pages/Cake'
 import CakeCategory from './pages/CakeCategory'
@@ -15,6 +16,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/cakes" element={<Cakes />} />
         <Route path="/cakes/:categoryName/:id" element={<Cake />} />
         <Route path="/cakes/:categoryName" element={<CakeCategory />} />
         <Route path="/recipes" element={<Recipes />} />

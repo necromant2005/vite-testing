@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CategoriesHeader from './CategoriesHeader';
 
 interface LayoutProps {
@@ -7,6 +7,12 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path ? 'fw-bold bg-light text-dark-emphasis' : '';
+  };
+
   return (
     <div className="">
       <header className="navbar navbar-expand-lg bd-navbar sticky-top bg-dark">
@@ -14,8 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="d-flex justify-content-between align-items-center py-3">
             <h1 className="h4 mb-0">Dashboard</h1>
             <nav className="nav">
-              <Link to="/" className="nav-link text-white">Home</Link>
-              <Link to="/recipes" className="nav-link text-white">Recipes</Link>
+              <Link to="/" className={`nav-link text-white ${isActive('/')}`}>Home</Link>
+              <Link to="/cakes" className={`nav-link text-white ${isActive('/cakes')}`}>Cakes</Link>
+              <Link to="/recipes" className={`nav-link text-white ${isActive('/recipes')}`}>Recipes</Link>
             </nav>
           </div>
         </div>

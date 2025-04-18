@@ -16,3 +16,9 @@ main {
   padding: 2rem 0;
 } 
 */
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+}
