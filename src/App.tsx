@@ -10,6 +10,7 @@ import CakeCategory from './pages/CakeCategory'
 import Recipe from './pages/Recipe.tsx'
 import RecipeCategory from './pages/RecipeCategory'
 import Recipes from './pages/Recipes'
+import Blog from './pages/Blog'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/recipes/:categoryName" element={<RecipeCategory />} />
         <Route path="/recipes/:categoryName/:id" element={<Recipe />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Layout>
   )

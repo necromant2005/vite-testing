@@ -23,6 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
               <Link to="/" className={`nav-link text-white ${isActive('/')}`}>Home</Link>
               <Link to="/cakes" className={`nav-link text-white ${isActive('/cakes')}`}>Cakes</Link>
               <Link to="/recipes" className={`nav-link text-white ${isActive('/recipes')}`}>Recipes</Link>
+              <Link to="/blog" className={`nav-link text-white ${isActive('/blog')}`}>Blog</Link>
             </nav>
           </div>
         </div>
