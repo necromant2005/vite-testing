@@ -2,30 +2,22 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import categories from '../data/recipes/categories.json';
 import recipes from '../data/recipes/recipes.json';
+import { Recipe } from '../types/Recipe';
 
-interface Category {
-  name: string;
-  title: string;
-  description: string;
-}
-
-interface Recipe {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
+interface CategoriesData {
+  categories: string[];
 }
 
 const RecipeCategory = () => {
   const { categoryName } = useParams();
   
-  // Find the category
-  const category = categories.categories.find((cat: Category) => cat.name === categoryName);
+  // Check if category exists
+  const categoryExists = (categories as CategoriesData).categories.includes(categoryName || '');
   
   // Find recipes in this category
   const categoryRecipes = recipes.recipes.filter((recipe: Recipe) => recipe.category === categoryName);
 
-  if (!category) {
+  if (!categoryExists) {
     return (
       <div className="container py-5">
         <h2>Category not found</h2>
@@ -36,8 +28,7 @@ const RecipeCategory = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="mb-4">{category.title}</h2>
-      <p className="text-muted mb-4">{category.description}</p>
+      <h2 className="mb-4">{categoryName}</h2>
       
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {categoryRecipes.map((recipe: Recipe) => (

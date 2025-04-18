@@ -1,14 +1,6 @@
 import { useParams } from 'react-router-dom'
 import recipesData from '../data/recipes/recipes.json'
-
-interface Recipe {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  ingredients: string[];
-  instructions: string[];
-}
+import type { Recipe } from '../types/Recipe'
 
 const Recipe = () => {
   const { id } = useParams()

@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom'
 import cakesData from '../data/cakes/cakes.json'
+import type { Cake } from '../types/Cake'
 
 const Cake = () => {
   const { id } = useParams()
-  const cake = cakesData.cakes.find(cake => cake.id === id)
+  const cake = cakesData.cakes.find((cake: Cake) => cake.id === id)
 
   if (!cake) {
     return (

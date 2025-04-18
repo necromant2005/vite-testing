@@ -2,36 +2,8 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import cakesData from '../data/cakes/cakes.json';
 import recipesData from '../data/recipes/recipes.json';
-
-type Cake = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-};
-
-type Recipe = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  ingredients: string[];
-  instructions: string[];
-};
-
-type Item = Cake | Recipe;
-
-type CakesData = {
-  cakes: Cake[];
-};
-
-type RecipesData = {
-  recipes: Recipe[];
-};
-
-const isRecipesData = (data: CakesData | RecipesData): data is RecipesData => {
-  return 'recipes' in data;
-};
+import type { Item } from '../types/DataTypes';
+import { CakesData, RecipesData, isRecipesData } from '../types/DataTypes';
 
 const CakeCategory = () => {
   const { categoryName } = useParams();
