@@ -4,6 +4,7 @@ import cakesData from '../data/cakes/cakes.json';
 import recipesData from '../data/recipes/recipes.json';
 import type { Item } from '../types/DataTypes';
 import { CakesData, RecipesData, isRecipesData } from '../types/DataTypes';
+import type { CakeCategory } from '../types/CakeCategory';
 
 const CakeCategory = () => {
   const { categoryName } = useParams();
