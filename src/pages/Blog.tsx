@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import matter from 'gray-matter';
 import './pages.css';
 
 interface BlogPost {
@@ -25,16 +24,35 @@ const Blog = () => {
           fetch('/src/data/blog/spring-special.md').then(res => res.text())
         ]);
 
+        const parseMarkdown = (content: string) => {
+          const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+          if (!frontMatterMatch) return null;
+          
+          const [, frontMatter, markdownContent] = frontMatterMatch;
+          const data = frontMatter.split('\n').reduce((acc, line) => {
+            const [key, ...valueParts] = line.split(':');
+            if (key && valueParts.length > 0) {
+              acc[key.trim()] = valueParts.join(':').trim().replace(/^["']|["']$/g, '');
+            }
+            return acc;
+          }, {} as Record<string, string>);
+
+          return {
+            data,
+            content: markdownContent
+          };
+        };
+
         const processedPosts = [
-          matter(welcomePost),
-          matter(bakingTipsPost),
-          matter(springSpecialPost)
-        ].map(({ data, content }, index) => ({
-          title: data.title,
-          date: data.date,
-          author: data.author,
-          category: data.category,
-          content,
+          parseMarkdown(welcomePost),
+          parseMarkdown(bakingTipsPost),
+          parseMarkdown(springSpecialPost)
+        ].filter(Boolean).map((post, index) => ({
+          title: post!.data.title,
+          date: post!.data.date,
+          author: post!.data.author,
+          category: post!.data.category,
+          content: post!.content,
           slug: `post-${index}`
         }));
 
