@@ -33,15 +33,14 @@ const RecipeCategory = () => {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {categoryRecipes.map((recipe: Recipe) => (
           <div key={recipe.id} className="col">
+            <Link to={`/recipes/${categoryName}/${recipe.id}`} className="text-decoration-none">
             <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">{recipe.title}</h5>
                 <p className="card-text">{recipe.description}</p>
-                <Link to={`/recipes/${categoryName}/${recipe.id}`} className="btn btn-primary">
-                  View Recipe
-                </Link>
               </div>
             </div>
+            </Link>
           </div>
         ))}
       </div>

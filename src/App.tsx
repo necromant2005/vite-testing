@@ -18,8 +18,8 @@ function App() {
         <Route path="/cakes/:categoryName/:id" element={<Cake />} />
         <Route path="/cakes/:categoryName" element={<CakeCategory />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipes/:id" element={<Recipe />} />
         <Route path="/recipes/:categoryName" element={<RecipeCategory />} />
+        <Route path="/recipes/:categoryName/:id" element={<Recipe />} />
       </Routes>
     </Layout>
   )

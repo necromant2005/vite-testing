@@ -51,6 +51,86 @@
         "Mix soy sauce, cornstarch, and water in a small bowl",
         "Pour sauce over vegetables and cook until thickened"
       ]
+    },
+    {
+      "id": "recipe3",
+      "title": "Creamy Mushroom Pasta",
+      "description": "A rich and creamy pasta dish with sautéed mushrooms and garlic.",
+      "category": "main-dishes",
+      "ingredients": [
+        "12 oz fettuccine pasta",
+        "2 tablespoons olive oil",
+        "3 cloves garlic, minced",
+        "8 oz mushrooms, sliced",
+        "1 cup heavy cream",
+        "1/2 cup grated parmesan cheese",
+        "Salt and pepper to taste",
+        "Fresh parsley for garnish"
+      ],
+      "instructions": [
+        "Cook pasta according to package instructions",
+        "Heat olive oil in a large skillet over medium heat",
+        "Add garlic and cook for 1 minute",
+        "Add mushrooms and cook until golden brown",
+        "Pour in heavy cream and bring to a simmer",
+        "Stir in parmesan cheese until melted",
+        "Season with salt and pepper",
+        "Toss cooked pasta with the sauce",
+        "Garnish with fresh parsley"
+      ]
+    },
+    {
+      "id": "recipe4",
+      "title": "Blueberry Muffins",
+      "description": "Moist and fluffy muffins bursting with fresh blueberries.",
+      "category": "desserts",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1/2 cup sugar",
+        "1 tablespoon baking powder",
+        "1/2 teaspoon salt",
+        "1 cup milk",
+        "1/4 cup vegetable oil",
+        "1 large egg",
+        "1 cup fresh blueberries",
+        "1 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "Preheat oven to 400°F (200°C)",
+        "Line muffin tin with paper liners",
+        "Mix flour, sugar, baking powder, and salt in a large bowl",
+        "In another bowl, whisk milk, oil, egg, and vanilla",
+        "Add wet ingredients to dry ingredients and stir until just combined",
+        "Gently fold in blueberries",
+        "Fill muffin cups 2/3 full",
+        "Bake for 20-25 minutes or until golden brown"
+      ]
+    },
+    {
+      "id": "recipe5",
+      "title": "Greek Salad",
+      "description": "A refreshing Mediterranean salad with crisp vegetables and feta cheese.",
+      "category": "salads",
+      "ingredients": [
+        "1 large cucumber, diced",
+        "4 large tomatoes, diced",
+        "1 red onion, thinly sliced",
+        "1 green bell pepper, diced",
+        "1 cup Kalamata olives",
+        "8 oz feta cheese, cubed",
+        "1/4 cup extra virgin olive oil",
+        "2 tablespoons red wine vinegar",
+        "1 teaspoon dried oregano",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Combine cucumber, tomatoes, onion, and bell pepper in a large bowl",
+        "Add olives and feta cheese",
+        "In a small bowl, whisk together olive oil, vinegar, and oregano",
+        "Pour dressing over salad and toss gently",
+        "Season with salt and pepper",
+        "Serve immediately or refrigerate for 30 minutes before serving"
+      ]
     }
   ]
 } 
